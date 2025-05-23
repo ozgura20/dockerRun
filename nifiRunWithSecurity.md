@@ -56,8 +56,9 @@ docker run --name nifi \
   -e TRUSTSTORE_PATH=/opt/certs/keystore.p12 \
   -e TRUSTSTORE_TYPE=PKCS12 \
   -e TRUSTSTORE_PASSWORD=admin123 \
-  -e INITIAL_ADMIN_IDENTITY="CN=nifi.local, OU=NiFi, O=Apache, L=Local, S=State, C=TR" \
-  -e NIFI_WEB_PROXY_HOST=nifi.local \
+  -e NIFI_WEB_PROXY_HOST="nifi.local,192.168.147.116" \
+  -e SINGLE_USER_CREDENTIALS_USERNAME=admin \
+  -e SINGLE_USER_CREDENTIALS_PASSWORD=SüperGüçlüParola123 \
   -d apache/nifi:latest
 🖥️ 3. Windows hosts Ayarı
 makefile
